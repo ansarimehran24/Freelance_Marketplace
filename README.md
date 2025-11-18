@@ -1,0 +1,1 @@
+This is a website created by Newton School students for the first semester SnW Project.
