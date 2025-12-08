@@ -16,9 +16,11 @@
         }
 
         .main {
-            background-color: rgb(100, 100, 100);
+            background-color: grey;
             height: 100vh;
             width: 100vw;
+            position: relative;
+            z-index: -2;
         }
 
         .top {
@@ -33,11 +35,12 @@
             align-items: center;
             justify-content: space-between;
             padding-top: 16px;
+            height: 80px;
         }
 
         nav h1 {
             font-size: 30px;
-            color: white;
+            color: #404145;
         }
 
         .firstclutch {
@@ -48,7 +51,7 @@
 
         .firstclutch a {
             text-decoration: none;
-            color: white;
+            color: #404145;
         }
 
         .secondclutch {
@@ -64,10 +67,10 @@
         }
 
         .signin {
-            padding: 8px 16px;
-            border: 1px solid white;
+            padding: 8px 24px;
+            border: 1px solid #404145;
             background-color: transparent;
-            color: white;
+            color: #404145;
             border-radius: 10px;
 
         }
@@ -142,6 +145,7 @@
         .inputdiv img {
             height: 20px;
         }
+
         .inputdiv button {
             padding: 16px 32px;
             background-color: #155dfc;
@@ -155,22 +159,48 @@
             gap: 8px;
             font-size: 16px;
         }
-        .mouse{
+        .main video {
             position: absolute;
-            bottom: 5%;
-            right: 50%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            width: 100%;
+            margin-top: 100px;
         }
-        .innermouse{
-            height: 12px;
+        .mouse{
+            height: 40px;
             width: 4px;
+            border: 2px solid white;
             padding: 8px;
-            
+            border-radius: 12px;
         }
+         .innermouse {
+            background-color: white;
+            height: 10px;
+            width: 4px;
+            border-radius: 3px;
+            animation-name: bounce;
+            animation-duration: 0.55s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction:alternate-reverse;
+        }
+
+      @keyframes bounce { 
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-3px);
+            }
+        } 
     </style>
 </head>
 
 <body>
     <div class="main">
+        <video src="assets/video.mp4" loop muted autoplay ></video>
         <div class="top">
             <nav>
                 <div class="firstclutch">
@@ -207,6 +237,7 @@
                     <button> <img src="assets/search.svg" alt="search icon">Search</button>
                 </div>
             </div>
+            <!-- <div class="samplemouse"></div> -->
             <div class="mouse">
                 <div class="innermouse"></div>
             </div>
