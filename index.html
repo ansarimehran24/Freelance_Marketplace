@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lancify</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: sans-serif;
+
+        }
+
+        .main {
+            background-color: rgb(100, 100, 100);
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .top {
+            height: 100vh;
+            width: 80vw;
+            margin: auto;
+            position: relative;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+        }
+
+        nav h1 {
+            font-size: 30px;
+            color: white;
+        }
+
+        .firstclutch {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .firstclutch a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .secondclutch {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .notification-div {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .signin {
+            padding: 8px 16px;
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            border-radius: 10px;
+
+        }
+
+        .signup {
+            padding: 8px 24px;
+            background-color: #155dfc;
+            color: white;
+            border-radius: 10px;
+            border: 1px solid #155dfc;
+        }
+
+        .trusted {
+            margin-top: 20vh;
+            background-color: oklab(0.546 -0.030363 -0.243111 / 0.2);
+            backdrop-filter: blur(8px);
+            color: white;
+            padding: 8px 16px;
+            height: 42px;
+            width: auto;
+            display: inline-block;
+            border: 1px solid #667590;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hire h1 {
+            font-size: 72px;
+            color: white;
+        }
+
+        .freelancers h1 {
+            color: #51a2ff;
+        }
+
+        .hire {
+            margin-bottom: 24px;
+        }
+
+        .centeritems p {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 32px;
+        }
+
+        .centeritems {
+            max-width: 672px;
+        }
+
+        .inputdiv {
+            padding: 8px;
+            margin-bottom: 24px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .inputdiv input {
+            border: none;
+            padding: 16px 24px;
+            width: 80%;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .inputdiv input::placeholder {
+            opacity: 0.6;
+        }
+
+        .inputdiv img {
+            height: 20px;
+        }
+        .inputdiv button {
+            padding: 16px 32px;
+            background-color: #155dfc;
+            border: 1px solid #155dfc;
+            /* border: none; */
+            border-radius: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+        .mouse{
+            position: absolute;
+            bottom: 5%;
+            right: 50%;
+        }
+        .innermouse{
+            height: 12px;
+            width: 4px;
+            padding: 8px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <nav>
+                <div class="firstclutch">
+                    <h1 class="lancify">LANCIFY</h1>
+                    <div class="secondclutch">
+                        <a href="">Explore</a>
+                        <a href="">Hire Freelancers</a>
+                        <a href="">Find Work</a>
+                        <a href="">Resources</a>
+                    </div>
+                </div>
+                <div class="notification-div">
+                    <img style="width: 20px;" src="assets/notification-bell.svg" alt="bell">
+                    <img style="width: 20px;" src="assets/heart.svg" alt="heart">
+                    <button class="signin">Sign in</button>
+                    <button class="signup">Sign Up</button>
+                </div>
+            </nav>
+
+            <div class="centeritems">
+                <div class="trusted">✨ Trusted by 10,000+ businesses worldwide</div>
+                <div class="hire">
+                    <span>
+                        <h1>Hire Expert</h1>
+                    </span>
+                    <span class="freelancers">
+                        <h1>Freelancers</h1>
+                    </span>
+                </div>
+                <p>Work with talented professionals from around the globe. Get your projects done faster, better, and
+                    more efficiently.</p>
+                <div class="inputdiv">
+                    <input type="text" class="inputtag" placeholder="What service are you looking for?">
+                    <button> <img src="assets/search.svg" alt="search icon">Search</button>
+                </div>
+            </div>
+            <div class="mouse">
+                <div class="innermouse"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
