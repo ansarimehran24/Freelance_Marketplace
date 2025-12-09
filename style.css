@@ -1,29 +1,36 @@
+/* ========== GLOBAL RESET + BASE STYLES ========== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
     font-family: sans-serif;
-    color: white;
-
+    color: black;
 }
 
+body {
+    background-color: #ffffff;
+}
+
+/* MAIN HERO WRAPPER (video + top content + companies) */
 .main {
     background-color: white;
     height: 100vh;
     width: 100vw;
     position: relative;
     z-index: -200;
-    /* background-color: red; */
 }
 
+/* Container for navbar + hero content + mouse icon */
 .top {
-    /* background-color: blue; */
     height: 85vh;
     width: 80vw;
     margin: auto;
     position: relative;
 }
+
+/* ========== NAVBAR ========== */
 
 nav {
     display: flex;
@@ -38,6 +45,7 @@ nav h1 {
     color: #404145;
 }
 
+/* Left side: logo + nav links */
 .firstclutch {
     display: flex;
     align-items: center;
@@ -49,27 +57,30 @@ nav h1 {
     color: #404145;
 }
 
+/* Container for nav links */
 .secondclutch {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
+/* Right side: notification icons + buttons */
 .notification-div {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
+/* Sign in button (outline) */
 .signin {
     padding: 8px 24px;
     border: 1px solid #404145;
     background-color: transparent;
     color: #404145;
     border-radius: 10px;
-
 }
 
+/* Sign up button (primary) */
 .signup {
     padding: 8px 24px;
     background-color: #155dfc;
@@ -78,6 +89,9 @@ nav h1 {
     border: 1px solid #155dfc;
 }
 
+/* ========== HERO CONTENT ========== */
+
+/* Top badge: "Trusted by..." */
 .trusted {
     margin-top: 20vh;
     background-color: oklab(0.546 -0.030363 -0.243111 / 0.2);
@@ -92,11 +106,13 @@ nav h1 {
     margin-bottom: 24px;
 }
 
+/* Hero main headings */
 .hire h1 {
     font-size: 72px;
     color: white;
 }
 
+/* "Freelancers" coloured word */
 .freelancers h1 {
     color: #51a2ff;
 }
@@ -105,15 +121,19 @@ nav h1 {
     margin-bottom: 24px;
 }
 
+/* Hero paragraph */
 .centeritems p {
     font-size: 20px;
     color: white;
     margin-bottom: 32px;
 }
 
+/* Wrapper for hero text and search box */
 .centeritems {
     max-width: 672px;
 }
+
+/* ========== SEARCH INPUT BOX ========== */
 
 .inputdiv {
     padding: 8px;
@@ -125,27 +145,30 @@ nav h1 {
     align-items: center;
 }
 
+/* Search input box */
 .inputdiv input {
     border: none;
     padding: 16px 24px;
     width: 80%;
     font-size: 18px;
     outline: none;
+    color: #111827;
 }
 
 .inputdiv input::placeholder {
     opacity: 0.6;
 }
 
+/* Search icon */
 .inputdiv img {
     height: 20px;
 }
 
+/* Search button */
 .inputdiv button {
     padding: 16px 32px;
     background-color: #155dfc;
     border: 1px solid #155dfc;
-    /* border: none; */
     border-radius: 10px;
     color: white;
     display: flex;
@@ -153,7 +176,11 @@ nav h1 {
     align-items: center;
     gap: 8px;
     font-size: 16px;
+    cursor: pointer;
 }
+
+/* ========== BACKGROUND VIDEO ========== */
+
 .main video {
     position: absolute;
     top: 0px;
@@ -162,7 +189,11 @@ nav h1 {
     height: 80vh;
     width: 100%;
     margin-top: 100px;
+    object-fit: cover;
 }
+
+/* ========== MOUSE SCROLL INDICATOR ========== */
+
 .mouse {
     height: 40px;
     width: 24px;
@@ -175,6 +206,7 @@ nav h1 {
     top: 11vh;
 }
 
+/* Inner moving part of mouse */
 .innermouse {
     background-color: white;
     height: 10px;
@@ -187,6 +219,7 @@ nav h1 {
     animation-direction: alternate-reverse;
 }
 
+/* Bounce animation for inner mouse */
 @keyframes bounce {
     0% {
         transform: translateY(0px);
@@ -196,7 +229,10 @@ nav h1 {
         transform: translateY(-3px);
     }
 }
-.companies{
+
+/* ========== COMPANIES STRIP ========== */
+
+.companies {
     height: 15vh;
     background-color: #f3f4f6;
     display: flex;
@@ -206,28 +242,836 @@ nav h1 {
     gap: 30px;
     border: 2px solid rgba(0, 0, 0, 0.1);
 }
-.companies div{
+
+.companies div {
     font-size: 20px;
     color: #4a5565;
     margin-top: 24px;
-    
 }
-.companies img{
+
+.companies img {
     height: 50px;
 }
-.companies ul{
+
+/* Logos list */
+.companies ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-decoration-style: none; */
     list-style-type: none;
     gap: 70px;
 }
-.companies li{
+
+.companies li {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #99a1af;
-    gap:15px;
+    gap: 15px;
     font-size: 18px;
+}
+
+/* ========== EXPLORE SECTION ========== */
+
+.second {
+    padding: 80px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+/* Heading + subtitle */
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.explore h1 {
+    font-size: 48px;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.explore span {
+    font-size: 20px;
+    color: #6b7280;
+}
+
+/* Grid container for category cards */
+.categories-grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+}
+
+/* Individual category card */
+.category-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 2px solid #e6e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+/* Hover state for category card */
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
+    border: 2px solid #51a2ff;
+}
+
+/* Emoji icon */
+.category-icon {
+    font-size: 56px;
+}
+
+/* Category title */
+.category-title {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+/* Metadata row (e.g. freelancers count + link) */
+.category-meta span {
+    color: #4b5563;
+}
+
+.category-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* Explore link on card */
+.category-link {
+    font-size: 13px;
+    color: #155dfc;
+    font-weight: 500;
+}
+
+/* Responsive layout for Explore section */
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .second {
+        padding: 60px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .categories-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .explore h1 {
+        font-size: 32px;
+    }
+}
+
+/* ========== WHY CHOOSE LANCIFY SECTION ========== */
+
+.why-section {
+    padding: 80px 0 90px;
+    background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+}
+
+/* Main container */
+.why-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.why-heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.why-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 48px;
+}
+
+/* Features grid (4 columns by default) */
+.why-features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+/* Single feature card */
+.why-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Icon wrapper for features */
+.why-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background: #e5e7eb;
+}
+
+/* Coloured icon gradients */
+.why-icon-blue {
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+}
+
+.why-icon-yellow {
+    background: linear-gradient(135deg, #fef9c3, #fffbeb);
+}
+
+.why-icon-green {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+}
+
+.why-icon-purple {
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+}
+
+/* Feature title + text */
+.why-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.why-text {
+    font-size: 14px;
+    color: #6b7280;
+    max-width: 240px;
+}
+
+/* Stats bar under features */
+.why-stats {
+    margin-top: 24px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.08);
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 32px;
+}
+
+/* Each stat item */
+.stat-item {
+    flex: 1;
+    border-right: 1px solid rgba(148, 163, 184, 0.4);
+    padding: 0 16px;
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Responsive for Why section */
+@media (max-width: 900px) {
+    .why-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .why-stats {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+        padding-bottom: 16px;
+        margin-bottom: 8px;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-features {
+        grid-template-columns: 1fr;
+    }
+
+    .why-heading {
+        font-size: 32px;
+    }
+}
+
+/* Override / refine icon styles */
+.why-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5e7eb;
+}
+
+/* Make SVG icons fit nicely */
+.why-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* Use currentColor for SVG strokes */
+.why-icon-blue {
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    color: #2563eb;
+}
+
+.why-icon-yellow {
+    background: linear-gradient(135deg, #fef9c3, #fffbeb);
+    color: #eab308;
+}
+
+.why-icon-green {
+    background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+    color: #00a63e;
+}
+
+.why-icon-purple {
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+    color: #8b5cf6;
+}
+
+/* ========== TOP FREELANCERS SECTION ========== */
+
+.freelancers-section {
+    padding: 80px 0 90px;
+    background: #f9fafb;
+}
+
+.freelancers-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header row (title + View All link) */
+.freelancers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.freelancers-heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.freelancers-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+.freelancers-view-all {
+    font-size: 14px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.freelancers-view-all:hover {
+    text-decoration: underline;
+}
+
+/* Cards grid */
+.freelancer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Single freelancer card */
+.freelancer-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px 24px 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover state */
+.freelancer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 55px rgba(15, 23, 42, 0.12);
+}
+
+/* Featured card style */
+.freelancer-card-featured {
+    border-color: #2563eb;
+    box-shadow: 0 26px 60px rgba(37, 99, 235, 0.22);
+}
+
+/* Badge (Top Rated / Rising / Expert) */
+.freelancer-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #e5e7eb;
+    color: #111827;
+}
+
+/* Small coloured bar in badge */
+.freelancer-badge::before {
+    content: "";
+    width: 4px;
+    height: 12px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+/* Specific badge colours */
+.badge-top-rated {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.badge-rising {
+    background: #ecfdf3;
+    color: #16a34a;
+}
+
+.badge-expert {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+/* Avatar circle */
+.freelancer-avatar {
+    margin-top: 14px;
+    width: 78px;
+    height: 78px;
+    border-radius: 999px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #e5e7eb;
+}
+
+/* Specific avatar images (from assets) */
+.avatar-1 {
+    background-image: url("assets/person1.jpeg");
+}
+
+.avatar-2 {
+    background-image: url("assets/person2.jpeg");
+}
+
+.avatar-3 {
+    background-image: url("assets/person3.jpeg");
+}
+
+.avatar-4 {
+    background-image: url("assets/person4.jpeg");
+}
+
+/* Ensure background images display properly */
+.freelancer-avatar {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Names and roles */
+.freelancer-name {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.freelancer-role {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Location row */
+.freelancer-location {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.freelancer-location svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Rating row */
+.freelancer-rating {
+    margin-top: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.rating-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.freelancer-rating svg {
+    width: 14px;
+    height: 14px;
+    fill: #facc15;
+    stroke: #facc15;
+}
+
+.rating-reviews {
+    font-size: 12px;
+}
+
+/* Divider line before rate */
+.freelancer-divider {
+    margin-top: 14px;
+    width: 100%;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+/* Rate row */
+.freelancer-rate {
+    margin-top: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.rate-amount {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.rate-unit {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Responsive for freelancers grid */
+@media (max-width: 1024px) {
+    .freelancer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .freelancers-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .freelancer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========== CTA (READY TO GET STARTED) SECTION ========== */
+
+.cta-section {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cta-heading {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta-subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+/* CTA buttons row */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Base button style */
+.cta-btn {
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+/* Primary CTA (white) */
+.cta-btn-primary {
+    background: #ffffff;
+    color: #1d4ed8;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.2);
+}
+
+.cta-btn-primary:hover {
+    background: #e5e7eb;
+}
+
+/* Secondary CTA (transparent) */
+.cta-btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.cta-note {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* ========== FOOTER SECTION ========== */
+
+.footer-section {
+    background: #111828;
+    color: #9ca3af;
+    padding-top: 56px;
+    padding-bottom: 32px;
+}
+
+.footer-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Top grid: brand + 3 columns of links */
+.footer-top {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #111827;
+}
+
+/* Brand area */
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #f9fafb;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+/* Contact info list */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.footer-contact-item svg {
+    width: 16px;
+    height: 16px;
+    stroke: #9ca3af;
+    fill: none;
+}
+
+/* Social buttons row */
+.footer-social {
+    display: flex;
+    gap: 8px;
+}
+
+.footer-social button {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: 1px solid #1f2937;
+    background: #020617;
+    color: #9ca3af;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.footer-social button:hover {
+    background: #111827;
+    border-color: #374151;
+    color: #e5e7eb;
+}
+
+/* Footer link column titles */
+.footer-column-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin-bottom: 12px;
+}
+
+/* Individual footer links */
+.footer-link {
+    display: block;
+    font-size: 13px;
+    color: #9ca3af;
+    text-decoration: none;
+    margin-bottom: 6px;
+}
+
+.footer-link:hover {
+    color: #e5e7eb;
+}
+
+/* Bottom copyright bar */
+.footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Bottom links row */
+.footer-bottom-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-link {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.footer-bottom-link:hover {
+    color: #e5e7eb;
+}
+
+/* Footer responsiveness */
+@media (max-width: 900px) {
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .cta-heading {
+        font-size: 32px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        max-width: none;
+    }
 }
